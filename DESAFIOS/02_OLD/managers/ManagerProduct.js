@@ -26,22 +26,28 @@ export default class ProductManager{
         }
     }
 
-    getProductById = async () =>{
+    getProductById = async (id) =>{
         const products = await this.getProducts();
-        //arrary finindes, map, find, filter
+        if(!products.find(product => product.id === id)){
+            console.log("Producto no encontrado")
+        } else {
+            console.log(products.find(product => product.id === id))
+        }
     }
 
-    updateProduct = async () =>{
-        const products = await this.getProducts();
-        //array getProducts
+    updateProduct = async ({id, ...product}) =>{
+        await this.deleteProduct(id);
+        let productOld = await this.getProducts();
+        let productNew = [{ ...product, id}, ...productOld];        
         await fs.promises.writeFile(path, JSON.stringify(productNew, null, '\t' ))
+        console.log("Producto actualizado")
 
     }
 
-    deleteProduct = async () =>{
+    deleteProduct = async (id) =>{
         const products = await this.getProducts();
-        //array viewProducts
-        await fs.promises.writeFile(path, JSON.stringify(productNew, null, '\t' ))
-
+        const productFilter = products.filter(products => products.id != id)
+        await fs.promises.writeFile(path, JSON.stringify(productFilter, null, '\t' ))
     }
-}
+};
+

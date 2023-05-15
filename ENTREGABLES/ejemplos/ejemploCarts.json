@@ -1,0 +1,12 @@
+// se debe crear un carrito con id y array vacio de productos.
+// dentro de este array vacio de productos, se deben obtener id del producto y cantidad del mismo.
+// se debe poder cargar mas cantidad del producto o agregar productos por id mediante:
+// "/api/carts/1/products/5"
+// la cantidad debe siempre empezar en 1
+
+[
+    {
+        "id":1,
+        "products":[]
+    }
+]
