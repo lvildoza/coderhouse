@@ -1,7 +1,6 @@
 import express from "express";
-import ProductManager from "./controllers/ProductManager.js";
-
-const product = new ProductManager();
+import productRouter from "./router/product.routes.js";
+import cartRouter from "./router/carts.routes.js";
 
 const app = express()
 const PORT = 8080
@@ -9,24 +8,8 @@ const PORT = 8080
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/products", async (req, res) => {
-    res.send(await product.getProducts())
-});
-
-app.get("/products/:id", async (req, res) => {
-    let id = req.params.id
-    res.send(await product.getProductsById(id))
-});
-
-app.post("/products", async (req, res) => {
-    let newProduct = req.body
-    res.send(await product.addProducts(newProduct))
-});
-
-app.delete("/products/:id", async (req, res) => {
-    let id = req.params.id
-    res.send(await product.deleteProducts(id))
-});
+app.use("/api/products", productRouter);
+app.use("/api/cart", cartRouter)
 
 app.listen(PORT, () => {
     console.log(`servidor Express Puerto ${PORT}`);

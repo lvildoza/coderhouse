@@ -5,7 +5,8 @@ class ProductManager{
     constructor() {
         this.path = './src/models/products.json';
     }
-
+    
+// Funciones secundarias
     readProducts = async () => {
         let products = await fs.readFile(this.path, "utf-8");
         return JSON.parse(products);
@@ -15,6 +16,13 @@ class ProductManager{
         await fs.writeFile(this.path, JSON.stringify(product));
     };
 
+    exists = async(id) => {
+        let products = await this.readProducts();
+        return products.find(prod => prod.id === id)
+    }
+    
+
+// Funciones para POST, GET, PUT, DELETE
     addProducts = async (product) => {
         let productsOld = await this.readProducts();
         product.id = nanoid();
@@ -28,11 +36,20 @@ class ProductManager{
     };
 
     getProductsById = async (id) => {
-        let products = await this.readProducts();
-        let productsById = products.find(prod => prod.id === id)
+        let productsById = await this.exists(id)
         if(!productsById) return "Producto no encontrado"
         return productsById;
     };
+
+    updateProduct = async (id, product) => {
+        let productsById = await this.exists(id);
+        if(!productsById) return "Producto No Encontrado"
+        await this.deleteProducts(id);
+        let productOld = await this.readProducts()
+        let products = [{...product, id : id}, ...productOld];
+        await this.writeProducts(products);
+        return "Producto Actualizado";
+    }
 
     deleteProducts = async (id) => {
         let products = await this.readProducts();
