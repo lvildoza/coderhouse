@@ -5,7 +5,6 @@ import ProductManager from './ProductManager.js';
 
 const productAll = new ProductManager;
 
-
 class cartManager{
     constructor() {
         this.path = './src/models/carts.json';
@@ -26,6 +25,7 @@ class cartManager{
         return carts.find(cart => cart.id === id)
     };
 
+// Funciones para POST, GET, PUT
     addCarts = async () => {
         let cartsOld = await this.readCarts();
         let id = nanoid();

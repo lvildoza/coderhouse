@@ -5,8 +5,8 @@ import cartRouter from "./router/carts.routes.js";
 const app = express()
 const PORT = 8080
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); //Me permite leer json en las peticiones
+app.use(express.urlencoded({ extended: true })); //Objetos codificados desde URL
 
 app.use("/api/products", productRouter);
 app.use("/api/cart", cartRouter)
