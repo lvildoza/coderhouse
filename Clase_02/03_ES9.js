@@ -41,4 +41,4 @@ console.log("\n************** Rest operator: ************ \n");
 const toArray = (...args) => { //En este caso estamos usando el operador como argumento
     return args;               // por esto, los argumentos se unen y se constuye un array con los mismos.
 }
-console.log(toArray(1, 2, 3, 4));
+console.log(toArray(1, 2, 3, 'Leo'));
