@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Mate",
+    "description": "Organico",
+    "price": 1200,
+    "thumbnail": "http://imagen.mate.com.ar",
+    "code": "MA720CO",
+    "stock": 5900
+  },
+  {
+    "title": "Café",
+    "description": "Bonafide",
+    "price": 5220,
+    "thumbnail": "http://imagen.mate.com.ar",
+    "code": "CA560AR",
+    "stock": 1500
+  }
+]
