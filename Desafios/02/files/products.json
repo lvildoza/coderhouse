@@ -1,0 +1,74 @@
+[
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 10,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 3
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": "true",
+		"id": 1
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 4
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 5
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 6
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 7
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 8
+	},
+	{
+		"title": "Calculadora",
+		"description": "cientifica",
+		"price": 6540,
+		"thumbnail": "ruta de la imagen",
+		"code": "1111",
+		"stock": 5,
+		"id": 9
+	}
+]
