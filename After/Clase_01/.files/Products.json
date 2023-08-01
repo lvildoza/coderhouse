@@ -14,5 +14,13 @@
     "thumbnail": "http://imagen.mate.com.ar",
     "code": "CA560AR",
     "stock": 1500
+  },
+  {
+    "title": "Café",
+    "description": "Bonafide",
+    "price": 5220,
+    "thumbnail": "http://imagen.mate.com.ar",
+    "code": "CA560AR",
+    "stock": 1500
   }
 ]
